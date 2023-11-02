@@ -1,9 +1,3 @@
-# Team Members
-1. Rahul Googikoll [1AM19CS158]
-2. Rahul Mishra [1AM19CS159]
-3. Saurav Kumar [1AM19CS195]
-
-
 # Introduction
 ## 1.1 Project outline
 This application is going to be used by:
