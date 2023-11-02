@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+</head>
+<body>
+    <section class="login_page">
+        <div class="imgbx">
+            <img src="{% static 'image/sign_up.jpeg' %}" alt="">
+        </div>
+        <div class="contentbx">
+            <div class="formbx">
+                <h2>SIGNUP</h2>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form method='POST' action="">
+                    {% csrf_token %}
+                    <div class="inputbx">
+                        <span>Name</span>
+                        {{form.username}}
+                    </div>
+                    <div class="inputbx">
+                        <span>Email</span>
+                        {{form.email}}
+                    </div>
+                    <div class="inputbx">
+                        <span>Password</span>
+                        {{form.password1}}                      
+                    </div>
+                    <div class="inputbx">
+                        <span>Confirm Password</span>
+                        {{form.password2}}
+                    </div>
+                    <div class="inputbx">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                    <div class="txt"><h4>include digits in your password</h4></div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

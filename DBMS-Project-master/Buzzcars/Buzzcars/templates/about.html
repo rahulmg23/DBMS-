@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>Buzz</span>cars </a>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">home</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'vehicle' %}">Vehicles</a>
+    </nav>
+</header>
+<div class="about-section">  
+    <div class="about-containers">
+       <div class="content-section">
+           <div class="title">
+                <h1>About Us</h1>
+                <div class="border"></div>
+           </div>
+           <div class="content">
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quod molestiae quae accusantium fuga? Consectetur aperiam iure magnam impedit odio soluta sunt dolore? Placeat quibusdam modi esse ipsam debitis expedita.</p>
+               
+            </div>
+            <div class="skills-title">
+                <h2>We Serve!</h2>
+            </div>
+            <div class="skills">
+                
+                <span>Quality services</span>
+                <span>Premium Cars</span>
+                <span>Quality Parts</span>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="{% static 'image/about.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

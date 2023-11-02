@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+</head>
+<body>
+    <section class="login_page">
+        <div class="imgbx">
+            <img src="{% static 'image/login_pic.jpeg' %}" alt="">
+        </div>
+        <div class="contentbx">
+            <div class="formbx">
+                <h2>Login</h2>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="inputbx">
+                        <span>Username</span>
+                        <input type="text" name="username" placeholder="username" class="box"required>
+                    </div>
+                    <div class="inputbx">
+                        <span>Password</span>
+                        <input type="password"  name="password" placeholder="password" class="box"required>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" name="" id="">Remember me</label>
+                    </div>
+                    <div class="inputbx">
+                        <input type="submit" value="Sign in">
+                    </div>
+                    <div class="inputbx">
+                        <p>or login with</p>
+                        <div class="buttons">
+                            <a href="#" class="btn"> google </a>
+                            <a href="#" class="btn"> facebook </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

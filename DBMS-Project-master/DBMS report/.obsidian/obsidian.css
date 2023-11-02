@@ -1,0 +1,22 @@
+:root
+{
+  --mycolor1: #F9E300;
+  --mycolor2: #fffff;
+}
+
+.theme-light {
+  --color-code: var(--mycolor1);
+}
+
+.theme-dark {
+  --color-code: var(--mycolor2);
+}
+
+
+.cm-inline-code span {
+    color: var(--color-code)
+    }
+
+.cm-inline-code span {
+  color: #ffff
+}
